@@ -1,0 +1,253 @@
+/* Dashboard moderne avec style épuré */
+
+/* Menu de la sidebar */
+.sidebar-wrapper .menu {
+  padding: 0.75rem 0.5rem;
+  background: linear-gradient(145deg, #f8fafc 0%, #ffffff 100%);
+  border-right: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.sidebar-wrapper .menu .sidebar-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  color: #64748b;
+  text-transform: uppercase;
+  padding: 0.8rem 1.2rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.sidebar-wrapper .menu .sidebar-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 1.2rem;
+  right: 1.2rem;
+  height: 1px;
+  background: linear-gradient(90deg, #e2e8f0, transparent);
+}
+
+.sidebar-wrapper .menu .sidebar-item {
+  margin: 0.2rem 0;
+}
+
+.sidebar-wrapper .menu .sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.2rem;
+  border-radius: 12px;
+  color: #334155;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.sidebar-wrapper .menu .sidebar-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.sidebar-wrapper .menu .sidebar-link i,
+.sidebar-wrapper .menu .sidebar-link svg {
+  font-size: 1.1rem;
+  color: #6366f1;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.sidebar-wrapper .menu .sidebar-link:hover {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(129, 140, 248, 0.04) 100%);
+  color: #1e293b;
+  transform: translateX(4px) scale(1.02);
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.15);
+}
+
+.sidebar-wrapper .menu .sidebar-link:hover::before {
+  left: 100%;
+}
+
+.sidebar-wrapper .menu .sidebar-link:hover i,
+.sidebar-wrapper .menu .sidebar-link:hover svg {
+  color: #4f46e5;
+  transform: rotate(5deg) scale(1.1);
+}
+
+.sidebar-wrapper .menu .sidebar-item.active > .sidebar-link,
+.sidebar-wrapper .menu .sidebar-link.active {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  color: #ffffff;
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
+  transform: translateX(2px);
+}
+
+.sidebar-wrapper .menu .sidebar-item.active > .sidebar-link i,
+.sidebar-wrapper .menu .sidebar-item.active > .sidebar-link svg,
+.sidebar-wrapper .menu .sidebar-link.active i,
+.sidebar-wrapper .menu .sidebar-link.active svg {
+  color: #ffffff;
+}
+
+/* Sous-menu avec style moderne */
+.sidebar-wrapper .menu .submenu {
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+  border-left: 2px solid #e2e8f0;
+  position: relative;
+}
+
+.sidebar-wrapper .menu .submenu::before {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: 0;
+  width: 2px;
+  height: 0;
+  background: linear-gradient(180deg, #6366f1, #8b5cf6);
+  transition: height 0.3s ease;
+}
+
+.sidebar-wrapper .menu .submenu:hover::before {
+  height: 100%;
+}
+
+.sidebar-wrapper .menu .submenu .submenu-item a {
+  display: block;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  color: #475569;
+  font-size: 0.9rem;
+  font-weight: 450;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  position: relative;
+}
+
+.sidebar-wrapper .menu .submenu .submenu-item a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 2px;
+  background: #6366f1;
+  border-radius: 1px;
+  transition: width 0.2s ease;
+}
+
+.sidebar-wrapper .menu .submenu .submenu-item a:hover {
+  background: linear-gradient(90deg, rgba(99, 102, 241, 0.06), rgba(129, 140, 248, 0.02));
+  color: #1e293b;
+  padding-left: 1.2rem;
+}
+
+.sidebar-wrapper .menu .submenu .submenu-item a:hover::before {
+  width: 20px;
+}
+
+/* Lignes de tableau avec effet moderne */
+.table-responsive table.table tbody tr {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.table-responsive table.table tbody tr::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #6366f1, transparent);
+  transition: width 0.3s ease;
+}
+
+.table-responsive table.table tbody tr:hover {
+  background: linear-gradient(90deg, rgba(99, 102, 241, 0.04), rgba(255, 255, 255, 0.8));
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.08);
+}
+
+.table-responsive table.table tbody tr:hover::before {
+  width: 4px;
+}
+
+/* Badges de comptage stylisés */
+.sidebar-wrapper .menu .badge-menu-count {
+  margin-left: auto;
+  background: linear-gradient(135deg, #ddd6fe 0%, #e0e7ff 100%);
+  color: #5b21b6;
+  padding: 3px 10px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  border-radius: 50px;
+  box-shadow: 0 2px 8px rgba(91, 33, 182, 0.15);
+  transition: all 0.2s ease;
+}
+
+.sidebar-wrapper .menu .sidebar-link:hover .badge-menu-count {
+  background: linear-gradient(135deg, #c4b5fd 0%, #ddd6fe 100%);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(91, 33, 182, 0.25);
+}
+
+/* Badge pour les éléments actifs */
+.sidebar-wrapper .menu .sidebar-item.active .badge-menu-count,
+.sidebar-wrapper .menu .sidebar-link.active .badge-menu-count {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  backdrop-filter: blur(10px);
+}
+
+/* Adaptations responsive avec style */
+@media (max-width: 992px) {
+  .sidebar-wrapper .menu {
+    padding: 0.5rem 0.3rem;
+  }
+  
+  .sidebar-wrapper .menu .sidebar-link { 
+    padding: 0.65rem 0.8rem;
+    gap: 0.75rem;
+  }
+  
+  .sidebar-wrapper .menu .sidebar-title { 
+    padding-left: 0.8rem;
+    font-size: 0.75rem;
+  }
+  
+  .sidebar-wrapper .menu .submenu {
+    padding-left: 0.8rem;
+  }
+}
+
+/* Animation d'apparition */
+@keyframes slideInFade {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.sidebar-wrapper .menu .sidebar-item {
+  animation: slideInFade 0.3s ease forwards;
+}
+
+.sidebar-wrapper .menu .sidebar-item:nth-child(1) { animation-delay: 0.1s; }
+.sidebar-wrapper .menu .sidebar-item:nth-child(2) { animation-delay: 0.2s; }
+.sidebar-wrapper .menu .sidebar-item:nth-child(3) { animation-delay: 0.3s; }
+.sidebar-wrapper .menu .sidebar-item:nth-child(4) { animation-delay: 0.4s; }
+.sidebar-wrapper .menu .sidebar-item:nth-child(5) { animation-delay: 0.5s; }

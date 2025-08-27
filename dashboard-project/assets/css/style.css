@@ -1,0 +1,118 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+#main {
+    padding: 20px;
+}
+
+.page-heading {
+    margin-bottom: 20px;
+}
+
+.page-title h3 {
+    color: #333;
+}
+
+.breadcrumb {
+    background: none;
+    padding: 0;
+}
+
+.breadcrumb-item a {
+    color: #007bff;
+}
+
+.breadcrumb-item.active {
+    color: #6c757d;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.card-header {
+    background: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.card-title {
+    margin: 0;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+}
+
+.table th,
+.table td {
+    padding: 12px;
+    vertical-align: middle;
+    border-top: 1px solid #dee2e6;
+}
+
+.table th {
+    background-color: #f8f9fa;
+}
+
+.table img {
+    border-radius: 5px;
+}
+
+.form-control {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.btn {
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.modal-header {
+    background-color: #007bff;
+    color: white;
+}
+
+.modal-footer .btn {
+    margin-left: 5px;
+}
+
+.chart-container {
+    position: relative;
+    margin: auto;
+    height: 40vh;
+    width: 80vw;
+}
+
+@media (max-width: 768px) {
+    .chart-container {
+        width: 100%;
+    }
+}
